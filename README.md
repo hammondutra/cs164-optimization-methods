@@ -42,9 +42,25 @@ Open [`notebooks/06_descent_line_search.ipynb`](notebooks/06_descent_line_search
 
 Reusable line-search implementations are available in [`src/line_search.py`](src/line_search.py).
 
+### Session 7 — Gradient Descent and Approximate Line Search
+
+This notebook covers:
+
+- exact versus approximate line search and the Wolfe conditions,
+- Armijo backtracking with three simple numerical tests,
+- absolute and relative improvement, gradient-norm and iteration-limit stopping rules,
+- central finite differences and normalized gradient descent,
+- numerical-versus-exact comparison for the quadratic bowl,
+- saddle-point behavior under backtracking and analytical exact line search.
+
+Open [`notebooks/07_gradient_descent.ipynb`](notebooks/07_gradient_descent.ipynb) for the complete Session 7 PCW.
+
+Reusable implementations and executable tests are in [`src/gradient_descent.py`](src/gradient_descent.py).
+
 ## Setup
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+```
