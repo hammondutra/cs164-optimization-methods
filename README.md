@@ -1,86 +1,114 @@
-# CS164 - Optimization Methods
+# CS164 — Optimization Methods
 
-A learning repository for numerical optimization methods studied in CS164.
+Course notes, numerical experiments, and Python implementations for CS164 Optimization Methods.
 
-## Structure
+## Repository structure
 
-- `notebooks/` - concept explanations, derivations, experiments, plots, and reflections.
-- `src/` - reusable Python implementations extracted from the notebooks.
+- [`notebooks/`](notebooks/) — Jupyter notebooks with explanations, exercises, and visualizations.
+- [`src/`](src/) — Python scripts and reusable implementations corresponding to the sessions.
+- [`requirements.txt`](requirements.txt) — Python dependencies.
 
-## Current Topics
+## Sessions
 
 ### Session 1 — What and Why to Optimize
 
-Covers objectives, design variables, feasible sets, and Python/SageMath plotting warmups.
-Notebook: [`notebooks/01_what_why_optimize.ipynb`](notebooks/01_what_why_optimize.ipynb) · Python: [`src/01_what_why_optimize.py`](src/01_what_why_optimize.py).
+**Main contents**
+- Objective functions, design variables, and feasible sets.
+- Formulating a simple optimization problem using a thumbnail-brightness example.
+- Plotting univariate functions and bivariate contour maps.
+
+**Files**
+- [Jupyter notebook](notebooks/01_what_why_optimize.ipynb)
+- [Python script](src/why_optimize.py)
 
 ### Session 2 — Taylor Series and Numerical Approximation
 
-Covers univariate and multivariate Taylor polynomials, first- through third-order expansions and Python translations of the original plots.
-Notebook: [`notebooks/02_taylor_series_numerical_approximation.ipynb`](notebooks/02_taylor_series_numerical_approximation.ipynb) · Python: [`src/02_taylor_series_numerical_approximation.py`](src/02_taylor_series_numerical_approximation.py).
+**Main contents**
+- Univariate Taylor series and first-, second-, and third-order Taylor polynomials.
+- Approximating `sin(x)` around different expansion points.
+- Multivariate linear and quadratic approximations using gradients and Hessians.
+- Comparing original functions with their Taylor approximations in plots.
+
+**Files**
+- [Jupyter notebook](notebooks/02_taylor_series_numerical_approximation.ipynb)
+- [Python script](src/taylor_series.py)
 
 ### Session 3 — Quadratic Forms
 
-Covers Hessian-based quadratic approximations, second-derivative tests, the linear-regression objective and surface comparisons. The supplied PDF shows Q1–Q6 of nine questions; missing questions are not reconstructed.
-Notebook: [`notebooks/03_quadratic_forms.ipynb`](notebooks/03_quadratic_forms.ipynb) · Python: [`src/03_quadratic_forms.py`](src/03_quadratic_forms.py).
+**Main contents**
+- Reviewing stationary points, second-derivative tests, and unconstrained optimization.
+- Quadratic approximations of multivariable functions and their Hessians.
+- Comparing nonlinear surfaces with their quadratic Taylor approximations.
+- Connecting minimization to the least-squares objective in linear regression.
+
+**Files**
+- [Jupyter notebook](notebooks/03_quadratic_forms.ipynb)
+- [Python script](src/quadratic_forms.py)
 
 ### Session 4 — Tests for Positive Definiteness
 
-Covers symmetric matrices, eigenvalues, Sylvester's criterion, determinant counterexamples, contour and level-set plots, and matrix-polynomial gradients. The last source response was truncated in the PDF.
-Notebook: [`notebooks/04_positive_definiteness.ipynb`](notebooks/04_positive_definiteness.ipynb) · Python: [`src/04_positive_definiteness.py`](src/04_positive_definiteness.py).
+**Main contents**
+- Symmetric matrices, real eigenvalues, and the connection to positive definiteness.
+- Two-dimensional positive-definiteness criteria and determinant counterexamples.
+- Quadratic forms, bowls, saddles, and contour/level-set visualizations.
+- Gradients of linear and quadratic matrix expressions.
+
+**Files**
+- [Jupyter notebook](notebooks/04_positive_definiteness.ipynb)
+- [Python script](src/positive_definiteness.py)
 
 ### Session 5 — Bracketing Local Minima
 
-This notebook covers:
+**Main contents**
+- Local minima of one-variable functions and derivative-free bracketing.
+- Central finite differences for approximating derivatives.
+- Expanding intervals to bracket a minimum.
+- Using derivative signs and bisection to narrow a bracket.
 
-- local minima of univariate functions,
-- derivative-free bracketing,
-- the Intermediate Value Theorem,
-- central finite differences,
-- interval expansion,
-- bisection on the derivative.
-
-Open [`notebooks/05_bracketing.ipynb`](notebooks/05_bracketing.ipynb) for the full walkthrough.
-
-Reusable implementations are available in [`src/bracketing.py`](src/bracketing.py).
+**Files**
+- [Jupyter notebook](notebooks/05_bracketing.ipynb)
+- [Python script](src/bracketing.py)
 
 ### Session 6 — Descent and Exact Line Search
 
-This notebook covers:
+**Main contents**
+- Descent directions, step sizes, and iterative updates.
+- Visualizing descent steps on contour plots.
+- Reducing multivariable optimization to a one-dimensional line-search problem.
+- Exact line search using numerical derivatives, interval expansion, and bisection.
 
-- descent-direction iteration,
-- direction vectors and step sizes,
-- contour visualization of descent steps,
-- reducing a multivariable objective to a one-dimensional line-search problem,
-- exact line search,
-- numerical derivatives using central differences,
-- bisection for finding a line-search minimum,
-- automatic interval expansion,
-- exact line search on a quadratic bowl.
-
-Open [`notebooks/06_descent_line_search.ipynb`](notebooks/06_descent_line_search.ipynb) for the full walkthrough.
-
-Reusable line-search implementations are available in [`src/line_search.py`](src/line_search.py).
+**Files**
+- [Jupyter notebook](notebooks/06_descent_line_search.ipynb)
+- [Python script](src/line_search.py)
 
 ### Session 7 — Gradient Descent and Approximate Line Search
 
-This notebook covers:
+**Main contents**
+- Exact versus approximate line search and the Wolfe conditions.
+- Armijo backtracking and sufficient-decrease tests.
+- Absolute and relative improvement, gradient-norm, and maximum-iteration stopping conditions.
+- Normalized gradient descent with central finite differences.
+- Testing on a quadratic bowl and a saddle; examining exact line search on the saddle.
 
-- exact versus approximate line search and the Wolfe conditions,
-- Armijo backtracking with three simple numerical tests,
-- absolute and relative improvement, gradient-norm and iteration-limit stopping rules,
-- central finite differences and normalized gradient descent,
-- numerical-versus-exact comparison for the quadratic bowl,
-- saddle-point behavior under backtracking and analytical exact line search.
+**Files**
+- [Jupyter notebook](notebooks/07_gradient_descent.ipynb)
+- [Python script](src/gradient_descent.py)
 
-Open [`notebooks/07_gradient_descent.ipynb`](notebooks/07_gradient_descent.ipynb) for the complete Session 7 PCW.
-
-Reusable implementations and executable tests are in [`src/gradient_descent.py`](src/gradient_descent.py).
+> **Source note:** Sessions 1–4 and 7 include notebook content reconstructed from supplied PDF screenshots. The Python versions of the visible SageMath plots use NumPy and Matplotlib. The Session 3 source only showed Questions 1–6 of 9, and the last response in the Session 4 source was incomplete; those missing parts are not presented as original answers. Session 7 implements Armijo backtracking, which checks sufficient decrease but does not itself enforce the Wolfe curvature condition.
 
 ## Setup
+
+From the repository root:
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+jupyter notebook
+```
+
+To run a session's Python script directly, for example:
+
+```bash
+python src/gradient_descent.py
 ```
