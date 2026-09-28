@@ -94,8 +94,6 @@ Course notes, numerical experiments, and Python implementations for CS164 Optimi
 - [Jupyter notebook](notebooks/07_gradient_descent.ipynb)
 - [Python script](src/gradient_descent.py)
 
-> **Source note:** Sessions 1–4 and 7 include notebook content reconstructed from supplied PDF screenshots. The Python versions of the visible SageMath plots use NumPy and Matplotlib. The Session 3 source only showed Questions 1–6 of 9, and the last response in the Session 4 source was incomplete; those missing parts are not presented as original answers. Session 7 implements Armijo backtracking, which checks sufficient decrease but does not itself enforce the Wolfe curvature condition.
-
 ## Setup
 
 From the repository root:
