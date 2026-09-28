@@ -9,6 +9,26 @@ A learning repository for numerical optimization methods studied in CS164.
 
 ## Current Topics
 
+### Session 1 — What and Why to Optimize
+
+Covers objectives, design variables, feasible sets, and Python/SageMath plotting warmups.
+Notebook: [`notebooks/01_what_why_optimize.ipynb`](notebooks/01_what_why_optimize.ipynb) · Python: [`src/01_what_why_optimize.py`](src/01_what_why_optimize.py).
+
+### Session 2 — Taylor Series and Numerical Approximation
+
+Covers univariate and multivariate Taylor polynomials, first- through third-order expansions and Python translations of the original plots.
+Notebook: [`notebooks/02_taylor_series_numerical_approximation.ipynb`](notebooks/02_taylor_series_numerical_approximation.ipynb) · Python: [`src/02_taylor_series_numerical_approximation.py`](src/02_taylor_series_numerical_approximation.py).
+
+### Session 3 — Quadratic Forms
+
+Covers Hessian-based quadratic approximations, second-derivative tests, the linear-regression objective and surface comparisons. The supplied PDF shows Q1–Q6 of nine questions; missing questions are not reconstructed.
+Notebook: [`notebooks/03_quadratic_forms.ipynb`](notebooks/03_quadratic_forms.ipynb) · Python: [`src/03_quadratic_forms.py`](src/03_quadratic_forms.py).
+
+### Session 4 — Tests for Positive Definiteness
+
+Covers symmetric matrices, eigenvalues, Sylvester's criterion, determinant counterexamples, contour and level-set plots, and matrix-polynomial gradients. The last source response was truncated in the PDF.
+Notebook: [`notebooks/04_positive_definiteness.ipynb`](notebooks/04_positive_definiteness.ipynb) · Python: [`src/04_positive_definiteness.py`](src/04_positive_definiteness.py).
+
 ### Session 5 — Bracketing Local Minima
 
 This notebook covers:
