@@ -1,11 +1,11 @@
 # CS164 — Optimization Methods
 
-Course notes, numerical experiments, and Python implementations for CS164 Optimization Methods.
+Course notes, numerical experiments, and Python/R implementations for CS164 Optimization Methods.
 
 ## Repository structure
 
 - [`notebooks/`](notebooks/) — Jupyter notebooks with explanations, exercises, and visualizations.
-- [`src/`](src/) — Python scripts and reusable implementations corresponding to the sessions.
+- [`src/`](src/) — Python and R scripts with implementations corresponding to the sessions.
 - [`requirements.txt`](requirements.txt) — Python dependencies.
 
 ## Sessions
@@ -94,6 +94,19 @@ Course notes, numerical experiments, and Python implementations for CS164 Optimi
 - [Jupyter notebook](notebooks/07_gradient_descent.ipynb)
 - [Python script](src/gradient_descent.py)
 
+### Session 15 — Applying & Interpreting the KKT Conditions
+
+**Main contents**
+- Formulating nonnegative least-squares fitting for three drinks and six flavor dimensions.
+- Constructing the Lagrangian and applying the four KKT conditions.
+- Enumerating all eight active sets with an R solver, including the nonnegativity and sum-to-one constraints.
+- Interpreting binding constraints and nonzero inequality multipliers as sensitivity information.
+- Comparing the physically feasible optimal blend with the equality-only least-squares fit.
+
+**Files**
+- [Jupyter notebook (R / IRkernel)](notebooks/15_applying_interpreting_kkt.ipynb)
+- [R script](src/kkt_applications.R)
+
 ## Setup
 
 From the repository root:
@@ -109,4 +122,18 @@ To run a session's Python script directly, for example:
 
 ```bash
 python src/gradient_descent.py
+```
+
+
+For the Session 15 R notebook, install R and register its Jupyter kernel (IRkernel). For example, in an R console:
+
+```r
+install.packages("IRkernel")
+IRkernel::installspec(user = TRUE)
+```
+
+You can run the standalone session script with:
+
+```bash
+Rscript src/kkt_applications.R
 ```
