@@ -107,6 +107,28 @@ Course notes, numerical experiments, and Python/R implementations for CS164 Opti
 - [Jupyter notebook (R / IRkernel)](notebooks/15_applying_interpreting_kkt.ipynb)
 - [R script](src/kkt_applications.R)
 
+### Session 16 — Linear Programming
+
+**Main contents**
+- Matrix-form LP constraints, affine functions, convex objectives, and convex feasible sets.
+- Graphical feasible regions, vertices, linear and nonlinear level curves, and unbounded optimization.
+- Industrial profit maximization: \`(x,y)=(1,1)\`, maximum profit \`14\`; optional KKT certificate.
+- A greedy vertex-walking algorithm as an introduction to simplex.
+- Numerical verification with Python/CVXPY and review of L1, L2, and L-infinity norms.
+
+**Files**
+- [R notebook — Questions 1–6 and 8](notebooks/16_linear_programming_R.ipynb)
+- [Python notebook — Question 7](notebooks/16_linear_programming_Python.ipynb)
+- [R script — graphical experiments](src/linear_programming.R)
+- [Python script — CVXPY solver](src/linear_programming.py)
+
+Separate kernels keep the examples reproducible: R (IRkernel) for plots, Python (ipykernel) for CVXPY. While R can call Python through \`reticulate\`, that introduces another runtime dependency for a single exercise.
+
+\`\`\`bash
+Rscript src/linear_programming.R   # saves session16_plots.pdf
+python src/linear_programming.py
+\`\`\`
+
 ## Setup
 
 From the repository root:
