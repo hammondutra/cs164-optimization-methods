@@ -6,6 +6,7 @@ Course notes, numerical experiments, and Python/R implementations for CS164 Opti
 
 - [`notebooks/`](notebooks/) — Jupyter notebooks with explanations, exercises, and visualizations.
 - [`src/`](src/) — Python and R scripts with implementations corresponding to the sessions.
+- [`assignments/`](assignments/) — submitted assignment reports.
 - [`requirements.txt`](requirements.txt) — Python dependencies.
 
 ## Sessions
@@ -129,6 +130,28 @@ Rscript src/linear_programming.R   # saves session16_plots.pdf
 python src/linear_programming.py
 \`\`\`
 
+## Assignments
+
+### Assignment 2 — Unconstrained & Equality Constrained Optimization
+
+**Main contents**
+- Maximizing the cross-sectional area of a three-meter metal-sheet structure, subject to geometric and metal-length constraints.
+- Eliminating equality constraints to formulate the area as a function of side length and angle; identifying the feasible domain.
+- Using SageMath to produce surface and contour plots, calculate partial derivatives, and solve for the interior stationary point.
+- Verifying the global maximum with the Hessian test and boundary comparisons.
+- Implementing feasible gradient descent with Armijo backtracking and comparing it with fixed-rate gradient descent, momentum, and Newton's method.
+- Comparing convergence paths, iteration counts, and empirical runtime as workload and tolerance vary.
+
+**Files**
+- [Final report (PDF, 8 pages)](assignments/assignment_02_final_report.pdf)
+- [SageMath notebook — symbolic work and plots](notebooks/assignment_02_sagemath.ipynb)
+- [Python notebook — solvers and benchmarks](notebooks/assignment_02_python.ipynb)
+- [Python script — notebook computations](src/assignment_02_optimization.py)
+
+**Result:** The maximum cross-sectional area is approximately `1.2057714 m²`, attained at `a = 4√3 − 6 ≈ 0.928203 m` and `θ = π/3`. The remaining horizontal length is `b = 3 − √3 ≈ 1.267949 m`. In the submitted experiments, all four numerical methods converged; Newton's method required the fewest iterations and had the lowest measured runtime for this problem.
+
+The SageMath notebook requires a **SageMath Jupyter kernel** (not ordinary Python). The Python notebook and script use the dependencies in `requirements.txt`. Benchmark times are machine-dependent. The report is preserved as submitted.
+
 ## Setup
 
 From the repository root:
@@ -159,3 +182,11 @@ You can run the standalone session script with:
 ```bash
 Rscript src/kkt_applications.R
 ```
+
+For Assignment 2, run the Python notebook from the repository root, or execute:
+
+```bash
+python src/assignment_02_optimization.py
+```
+
+The standalone script produces the solver tables, plots, and runtime benchmarks. To run the separate SageMath notebook, install SageMath and register its Jupyter kernel.
