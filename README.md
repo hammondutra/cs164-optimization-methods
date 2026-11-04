@@ -130,6 +130,31 @@ Rscript src/linear_programming.R   # saves session16_plots.pdf
 python src/linear_programming.py
 \`\`\`
 
+### Session 17 — Duality
+
+**Main contents**
+- Deriving the primal and dual linear programs for a two-type concrete mixture and plotting their distinct 2D/3D feasible regions.
+- Solving the primal and dual **independently** with CVXPY, rather than extracting built-in dual variables; verifying the $50 optimum and a numerical zero duality gap.
+- Interpreting the Lagrangian as a constraint penalty for \(f(x)=x^2\) subject to \(x\geq1\), with multipliers 1, 10, and 100.
+- Connecting pointwise maximization over nonnegative multipliers to the infinite-step penalty; plotting the submitted finite step of height 20.
+- Reviewing weak/strong duality, Slater's condition, and the relationship to the KKT conditions.
+
+**Files**
+- [Jupyter notebook (Python)](notebooks/17_duality.ipynb)
+- [Python script](src/duality.py)
+
+The notebook is reconstructed from the **10-page submitted Session 17 PCW PDF**, not an original notebook export. The PDF includes four Python code cells (Questions 1–4), but stops at the beginning of Question 5; it does not include answers to Questions 5–6, which are not represented as completed work.
+
+From the repository root:
+
+```bash
+python src/duality.py
+python src/duality.py --save-dir session17_figures   # saves three PNG plots
+python src/duality.py --show                          # displays the plots
+```
+
+The notebook imports the companion script's reusable functions. Session 17 uses the existing numpy, matplotlib and cvxpy dependencies in `requirements.txt`; no extra package is needed.
+
 ## Assignments
 
 ### Assignment 2 — Unconstrained & Equality Constrained Optimization
