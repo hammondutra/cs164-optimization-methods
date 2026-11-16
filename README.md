@@ -155,6 +155,31 @@ python src/duality.py --show                          # displays the plots
 
 The notebook imports the companion script's reusable functions. Session 17 uses the existing numpy, matplotlib and cvxpy dependencies in `requirements.txt`; no extra package is needed.
 
+### Session 20 — Quadratic Programming
+
+**Main contents**
+- Comparing linear and quadratic programming, with Session 15's constrained squared-error drink mixture as a previous QP example.
+- Strict convexity, Hessian positive definiteness, the uniqueness of minimizers, and degenerate quadratic objectives.
+- Expressing a two-variable quadratic objective and its linear constraints in standard matrix form.
+- Contour plotting the objective and feasible region, then solving with CVXPY: unique optimum \`(x₁, x₂) = (0.5, 1)\` and minimum value \`11.25\`.
+- Introducing covariance matrices, variances, off-diagonal covariances, and positive semidefiniteness.
+
+**Files**
+- [Jupyter notebook (Python)](notebooks/20_quadratic_programming.ipynb)
+- [Python script](src/quadratic_programming.py)
+
+The notebook is reconstructed from the **five-page submitted Session 20 PCW PDF**, not an original notebook export. All five questions are covered, including two plotted Python code cells; the submitted matrix-form text's linear coefficient vector is corrected to \`[1, 6]\`. The attached PDF does not include additional in-class computations.
+
+From the repository root:
+
+\`\`\`bash
+python src/quadratic_programming.py
+python src/quadratic_programming.py --save-dir session20_figures  # saves two PNG plots
+python src/quadratic_programming.py --show                         # displays plots
+\`\`\`
+
+Session 20 uses the existing numpy, matplotlib, and cvxpy dependencies in \`requirements.txt\`; neither CVXOPT nor GLPK is needed.
+
 ## Assignments
 
 ### Assignment 2 — Unconstrained & Equality Constrained Optimization
